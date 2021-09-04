@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!--Este template se utilizara para cualquier objeto que se quiera eliminar-->
+<form action="" method="POST">
+       {% csrf_token %}
+       <p>Are you sure you want to delete "{{object}}"?</p>
+       <a href="{% url 'projects' %}"> <!--El Url regresa a la paj¿gina projectos con el boton go back-->
+            Go Back <!--Sin button porque no regresaba debe ser porque se necesita usar javaScript-->
+       </a>
+
+    <input type="submit" value="Confirm" />
+</form>
+
+{% endblock %}

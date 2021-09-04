@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>Project Form</h1>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}} <!--De la carpeta froms exporto el modelo que crea mi formulario con los atributos del modelo proyecto-->
+    <input type="submit">
+</form>
+
+{% endblock %}
